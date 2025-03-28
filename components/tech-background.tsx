@@ -162,8 +162,8 @@ export function TechBackground({ showPortfolio }: TechBackgroundProps) {
       ctx.fillStyle = resolvedTheme === "dark" ? "rgba(255, 255, 255, 0.9)" : "rgba(0, 0, 0, 0.9)"
       ctx.font = `${size * 0.2}px sans-serif`
       ctx.textAlign = "center"
-      ctx.fillText("MERN", x, y - size * 0.3)
-      ctx.fillText("Portfolio", x, y - size * 0.1)
+      ctx.fillText("Mohamed", x, y - size * 0.3)
+      ctx.fillText("Lassoued", x, y - size * 0.1)
 
       // Hint text (only if hint is visible)
       if (hintVisible) {

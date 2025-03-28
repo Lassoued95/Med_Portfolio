@@ -12,36 +12,42 @@ const photos = [
     src: "/placeholder.svg?height=600&width=800",
     alt: "Landscape photo",
     category: "Landscape",
+    image:"images/Photography/CSC_8389.jpg"
   },
   {
     id: 2,
     src: "/placeholder.svg?height=800&width=600",
     alt: "Portrait photo",
     category: "Portrait",
+    image:"images/Photography/CSC_8389.jpg"
   },
   {
     id: 3,
     src: "/placeholder.svg?height=600&width=800",
     alt: "Street photo",
     category: "Street",
+    image:"images/Photography/CSC_8389.jpg"
   },
   {
     id: 4,
     src: "/placeholder.svg?height=800&width=600",
     alt: "Architecture photo",
     category: "Architecture",
+    image:"images/Photography/CSC_8389.jpg"
   },
   {
     id: 5,
     src: "/placeholder.svg?height=600&width=800",
     alt: "Nature photo",
     category: "Nature",
+    image:"images/Photography/CSC_8389.jpg"
   },
   {
     id: 6,
     src: "/placeholder.svg?height=800&width=600",
     alt: "Travel photo",
     category: "Travel",
+    image:"images/Photography/CSC_8389.jpg"
   },
 ]
 
@@ -161,7 +167,7 @@ export function PhotoGallery() {
             }}
           >
             <Image
-              src={photo.src || "/placeholder.svg"}
+              src={photo.image || "/placeholder.svg"}
               alt={photo.alt}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -181,7 +187,7 @@ export function PhotoGallery() {
           {selectedPhoto && (
             <div className="relative h-[80vh]">
               <Image
-                src={selectedPhoto.src || "/placeholder.svg"}
+                src={selectedPhoto.image || "/placeholder.svg"}
                 alt={selectedPhoto.alt}
                 fill
                 className="object-contain"

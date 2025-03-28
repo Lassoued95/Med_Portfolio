@@ -22,24 +22,27 @@ export default function Home() {
           <div className="container flex h-16 items-center justify-between">
             <div className="font-bold text-xl">Mohamed Lassoued</div>
             <nav className="hidden md:flex gap-6">
-              <Link href="#home" className="text-sm font-medium hover:underline underline-offset-4">
+                <Link href="#home" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 Home
-              </Link>
-              <Link href="#projects" className="text-sm font-medium hover:underline underline-offset-4">
-                Projects
-              </Link>
-              <Link href="#photography" className="text-sm font-medium hover:underline underline-offset-4">
-                Photography
-              </Link>
-              <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
+                </Link>
+                <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 About
-              </Link>
-              <Link href="#certifications" className="text-sm font-medium hover:underline underline-offset-4">
+                </Link>
+                <Link href="#resume" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
+                Resume
+                </Link>
+                <Link href="#projects" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
+                Projects
+                </Link>
+                <Link href="#certifications" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 Certifications
-              </Link>
-              <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4">
+                </Link>
+                <Link href="#photography" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
+                Photography
+                </Link>
+                <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 Contact
-              </Link>
+                </Link>
             </nav>
             <div className="flex items-center gap-2">
               <ModeToggle />
@@ -74,7 +77,10 @@ export default function Home() {
             </p>
             <div className="flex gap-4">
               <Button asChild>
-                <Link href="#projects">View My Work</Link>
+                <Link href="/cv/My_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Download CV
+                
+                </Link>
               </Button>
               <Button variant="outline" asChild>
                 <Link href="#contact">Contact Me</Link>
@@ -82,79 +88,27 @@ export default function Home() {
             </div>
             <div className="flex gap-4 mt-8">
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/Lassoued95" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/in/mohamed-lassoued-a5b5b8243/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="mailto:contact@example.com">
+                <Link href="mailto:lassouedmohamed2004@gmail.com">
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </Link>
               </Button>
             </div>
           </section>
-
-          {/* Projects Section */}
-          <section id="projects" className="py-16">
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">Development Projects</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                A selection of my recent web development work using the MERN stack and other technologies.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ProjectCard
-                title="E-Commerce Platform"
-                description="A full-stack MERN application with user authentication, product management, and payment integration."
-                tags={["React", "Node.js", "MongoDB", "Express"]}
-                image="/placeholder.svg?height=200&width=400"
-                link="#"
-              />
-              <ProjectCard
-                title="Task Management App"
-                description="A real-time collaborative task management tool with drag-and-drop functionality."
-                tags={["React", "Redux", "Socket.io", "Express"]}
-                image="/placeholder.svg?height=200&width=400"
-                link="#"
-              />
-              <ProjectCard
-                title="Social Media Dashboard"
-                description="Analytics dashboard that aggregates data from multiple social media platforms."
-                tags={["React", "Chart.js", "Node.js", "API Integration"]}
-                image="/placeholder.svg?height=200&width=400"
-                link="#"
-              />
-            </div>
-            <div className="text-center mt-8">
-              <Button variant="outline" asChild>
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  View More on GitHub
-                </Link>
-              </Button>
-            </div>
-          </section>
-
-          {/* Photography Section */}
-          <section id="photography" className="py-16">
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">Photography Portfolio</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Capturing moments and emotions through the lens. Here's a selection of my photographic work.
-              </p>
-            </div>
-            <PhotoGallery />
-          </section>
-
-          {/* About/Skills Section */}
-          <section id="about" className="py-16">
+           {/* About/Skills Section */}
+           <section id="about" className="py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-4">About Me</h2>
@@ -173,36 +127,119 @@ export default function Home() {
                   open-source projects, and continuously expanding my skills in both development and photography.
                 </p>
 
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Badge className="px-3 py-1">
-                    MongoDB
-                  </Badge>
-                  <Badge variant="secondary" className="px-3 py-1">
-                    Express.js
-                  </Badge>
-                  <Badge variant="secondary" className="px-3 py-1">
-                    React
-                  </Badge>
-                  <Badge variant="secondary" className="px-3 py-1">
-                    Node.js
-                  </Badge>
-                  <Badge variant="secondary" className="px-3 py-1">
-                    Next.js
-                  </Badge>
-                  <Badge variant="secondary" className="px-3 py-1">
-                    TypeScript
-                  </Badge>
-                  <Badge variant="secondary" className="px-3 py-1">
-                    Tailwind CSS
-                  </Badge>
-                  <Badge variant="secondary" className="px-3 py-1">
-                    Photography
-                  </Badge>
-                </div>
+                <div className="mt-6">
+
+                    {/* Technologies Web & Frameworks */}
+                    <div className="flex flex-wrap gap-3">
+                      <h3 className="text-lg font-semibold w-full">Web Technologies & Frameworks</h3>
+                      <Badge className="px-3 py-1">MongoDB</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">Express.js</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">React</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">Node.js</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">Next.js</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">TypeScript</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">Tailwind CSS</Badge>
+                    </div>
+
+                    {/* Langages de programmation */}
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <h3 className="text-lg font-semibold w-full">Programming Languages</h3>
+                      <Badge className="px-3 py-1">Python</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">JavaScript</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">C</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">PHP</Badge>
+                    </div>
+
+                    {/* Outils de versioning */}
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <h3 className="text-lg font-semibold w-full">Version Control & Collaboration</h3>
+                      <Badge className="px-3 py-1">Git</Badge>
+                      <Badge variant="secondary" className="px-3 py-1">GitHub</Badge>
+                    </div>
+                  
+</div>
+
               </div>
               <SkillIcons />
             </div>
           </section>
+
+          {/* Resume Section */}
+
+                      <section id="resume" className="py-16">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">My Resume</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Here’s a quick look at my educational background and professional experiences.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div className="bg-slate-950 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl font-bold mb-4">Education</h3>
+                  <ul>
+                    <li className="mb-3">
+                      <strong>Djerba Midoun High School</strong><br />
+                      <span className="text-sm text-muted-foreground">Sep 2020 - Jun 2023</span>
+                    </li>
+                    <li>
+                      <strong>Higher Institute of Informatics of Mahdia</strong><br />
+                      <span className="text-sm text-muted-foreground">Sep 2023 - Present</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-slate-950 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl font-bold mb-4">Work Experience</h3>
+                  <ul>
+                    <li className="mb-3">
+                      <strong>Freelance Web Developer</strong><br />
+                      <span className="text-sm text-muted-foreground">Jan 2025 - Present</span><br />
+                      <p className="text-sm">Collaborating on various freelance projects, including e-commerce websites, portfolios, and custom web applications.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+          {/* Projects Section */}
+          <section id="projects" className="py-16">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold mb-4">Development Projects</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                A selection of my recent web development work using the MERN stack and other technologies.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <ProjectCard
+                title="E-Commerce Platform"
+                description="A full-stack MERN application designed for seamless online shopping experiences. This platform includes user authentication, product management, and a dynamic shopping cart. With an intuitive UI powered by Tailwind CSS, users can browse, search, and manage products effortlessly. The backend ensures secure data handling and efficient API communication using Express and MongoDB."
+                tags={["React", "Node.js", "MongoDB", "Express" ,"Tailwind CSS"]}
+                image="/images/Projects/ecommerce2.png"
+                link="https://github.com/Lassoued95/GDG_Project"
+              />
+              <ProjectCard
+                title="Jobify - Your Smart Job Tracker"
+                description="A modern job tracking application that helps users manage job applications efficiently. Jobify offers real-time updates, intuitive filtering, and seamless organization to keep your job hunt on track."
+                tags={["React", "Redux", "Socket.io", "Express"]}
+                image="/images/Projects/jobify.png"
+                link="#"
+              />
+              <ProjectCard
+                title="Social Media Dashboard"
+                description="Analytics dashboard that aggregates data from multiple social media platforms."
+                tags={["React", "Chart.js", "Node.js", "API Integration"]}
+                image="/placeholder.svg?height=200&width=400"
+                link="#" 
+              />
+            </div>
+            <div className="text-center mt-8">
+              <Button variant="outline" asChild>
+                <Link href="https://github.com/Lassoued95" target="_blank" rel="noopener noreferrer">
+                  View More on GitHub
+                </Link>
+              </Button>
+            </div>
+          </section>
+
 
           {/* Certifications Section */}
           <section id="certifications" className="py-16">
@@ -213,6 +250,17 @@ export default function Home() {
               </p>
             </div>
             <Certifications />
+          </section>
+
+            {/* Photography Section */}
+            <section id="photography" className="py-16">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold mb-4">Photography Portfolio</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Capturing moments and emotions through the lens. Here's a selection of my photographic work.
+              </p>
+            </div>
+            <PhotoGallery />
           </section>
 
           {/* Contact Section */}
@@ -233,13 +281,13 @@ export default function Home() {
             </div>
             <div className="flex gap-4">
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/Lassoued95" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://linkedin.comhttps://www.linkedin.com/in/mohamed-lassoued-a5b5b8243/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>

@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Award, ExternalLink } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface Certification {
   title: string
@@ -15,14 +16,25 @@ interface Certification {
   description: string
   skills: string[]
   link?: string
+  image?: string
 }
 
 export function Certifications() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
-  // Replace with your actual certifications
+  // Certifications data with the new GDG Tech Days certificate
   const certifications: Certification[] = [
+    {
+      title: "GDG Tech Days Web Track",
+      issuer: "Google Developer Groups Sousse",
+      date: "February 2025",
+      description:
+        "Completed the Web Track Workshops at GDG Tech Days 2025, focusing on modern web development technologies and practices.",
+      skills: ["Web Development", "JavaScript", "Collaboration", "Hands-on Learning"],
+      link: "https://www.linkedin.com/posts/mohamed-lassoued-a5b5b8243_gdgtechdays-activity-7304889503456870401-sqbR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADxsYucBLVSHo2fZe3H1kplzkPNGUtkMTTg",
+      image: "/images/Certifications/GDG_Certif.png",
+    },
     {
       title: "MERN Stack Developer",
       issuer: "Udemy",
@@ -51,7 +63,6 @@ export function Certifications() {
 
   return (
     <div ref={ref} className="space-y-6">
-      <h2 className="text-3xl font-bold mb-6">Certifications</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {certifications.map((cert, index) => (
           <motion.div
@@ -73,6 +84,19 @@ export function Certifications() {
                 </div>
               </CardHeader>
               <CardContent>
+                {cert.image && (
+                  <div className="mb-4 relative overflow-hidden rounded-md">
+                    <Link href={cert.image} target="_blank" rel="noopener noreferrer">
+                      <Image
+                        src={cert.image || "/placeholder.svg"}
+                        alt={`${cert.title} Certificate`}
+                        width={400}
+                        height={300}
+                        className="w-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </Link>
+                  </div>
+                )}
                 <p className="text-muted-foreground mb-4">{cert.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {cert.skills.map((skill) => (
