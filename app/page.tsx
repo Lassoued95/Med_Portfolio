@@ -111,7 +111,7 @@ export default function Home() {
            <section id="about" className="py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-4">About Me</h2>
+                <h2 className="text-3xl font-bold mb-4 flex justify-center">About Me</h2>
                 <p className="text-muted-foreground mb-4">
                   I'm Mohamed Lassoued, a passionate MERN Stack developer and photographer based in Tunisia. I combine
                   technical expertise with creative vision to build beautiful digital experiences and capture compelling
@@ -130,7 +130,7 @@ export default function Home() {
                 <div className="mt-6">
 
                     {/* Technologies Web & Frameworks */}
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3  justify-center">
                       <h3 className="text-lg font-semibold w-full">Web Technologies & Frameworks</h3>
                       <Badge className="px-3 py-1">MongoDB</Badge>
                       <Badge variant="secondary" className="px-3 py-1">Express.js</Badge>
@@ -142,7 +142,7 @@ export default function Home() {
                     </div>
 
                     {/* Langages de programmation */}
-                    <div className="mt-6 flex flex-wrap gap-3">
+                    <div className="mt-6 flex flex-wrap gap-3   justify-center">
                       <h3 className="text-lg font-semibold w-full">Programming Languages</h3>
                       <Badge className="px-3 py-1">Python</Badge>
                       <Badge variant="secondary" className="px-3 py-1">JavaScript</Badge>
@@ -151,7 +151,7 @@ export default function Home() {
                     </div>
 
                     {/* Outils de versioning */}
-                    <div className="mt-6 flex flex-wrap gap-3">
+                    <div className="mt-6 flex flex-wrap gap-3  justify-center">
                       <h3 className="text-lg font-semibold w-full">Version Control & Collaboration</h3>
                       <Badge className="px-3 py-1">Git</Badge>
                       <Badge variant="secondary" className="px-3 py-1">GitHub</Badge>
@@ -174,7 +174,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <div className="bg-slate-950 p-6 rounded-lg shadow-lg">
+              <div className="bg-white dark:bg-slate-950 p-6 rounded-lg shadow-lg">
                   <h3 className="text-xl font-bold mb-4">Education</h3>
                   <ul>
                     <li className="mb-3">
@@ -187,7 +187,7 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-slate-950 p-6 rounded-lg shadow-lg">
+                <div className="bg-white dark:bg-slate-950 p-6 rounded-lg shadow-lg">
                   <h3 className="text-xl font-bold mb-4">Work Experience</h3>
                   <ul>
                     <li className="mb-3">
@@ -242,13 +242,14 @@ export default function Home() {
 
 
           {/* Certifications Section */}
-          <section id="certifications" className="py-16">
+          <section id="certifications" className="py-16 ">
             <div className="mb-12 text-center">
               <h2 className="text-3xl font-bold mb-4">My Certifications</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Professional certifications and courses I've completed to enhance my skills.
               </p>
             </div>
+            <div></div>
             <Certifications />
           </section>
 
@@ -293,7 +294,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="mailto:contact@example.com">
+                <Link href="mailto:lassouedmohamed2004@gmail.com">
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </Link>

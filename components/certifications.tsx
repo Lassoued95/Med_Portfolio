@@ -36,29 +36,24 @@ export function Certifications() {
       image: "/images/Certifications/GDG_Certif.png",
     },
     {
-      title: "MERN Stack Developer",
-      issuer: "Udemy",
-      date: "2023",
-      description: "Comprehensive certification covering MongoDB, Express, React, and Node.js development.",
-      skills: ["MongoDB", "Express", "React", "Node.js"],
-      link: "#",
+      "title": "Flutter Workshop Participant",
+      "issuer": "GDG RandoTek",
+      "date": "Jan-Mar 2024",
+      "description": "Certificate of participation in the Flutter workshop organized by GDG RandoTek in Sousse. This workshop covered Flutter app development, best practices, and modern tools for building smooth and high-performance mobile applications.",
+      "skills": ["Flutter", "Dart", "Mobile Development", "UI/UX"],
+      "link": "#",
+      "image": "/images/Certifications/GDG_Flutter.png"
     },
-    {
-      title: "Advanced JavaScript",
-      issuer: "freeCodeCamp",
-      date: "2022",
-      description: "In-depth JavaScript programming concepts, patterns, and best practices.",
-      skills: ["JavaScript", "ES6+", "Async/Await", "Functional Programming"],
-      link: "#",
-    },
-    {
-      title: "Professional Photography",
-      issuer: "Photography Institute",
-      date: "2021",
-      description: "Professional certification in digital photography techniques and composition.",
-      skills: ["Composition", "Lighting", "Post-Processing", "Portrait Photography"],
-      link: "#",
-    },
+    {  
+      "title": "MICMINDS Hackathon Participant",  
+      "issuer": "Microsoft ISIMA Club",  
+      "date": "Dec 2-3, 2023",  
+      "description": "Certificate of participation in the MICMINDS Hackathon, recognizing exceptional dedication, creativity, and problem-solving skills. Contributed actively to innovative solutions during the 24-hour event.",  
+      "skills": ["Hackathon Participation", "Problem-Solving", "Team Collaboration", "Creative Innovation"],  
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7137444503942017024/",  
+      "image": "/images/Certifications/MICMINDS_Hackathon_2023.jpg"  
+    }  
+    
   ]
 
   return (

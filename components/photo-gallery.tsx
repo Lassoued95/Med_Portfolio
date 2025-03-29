@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { cn } from "@/lib/utils"
+import { Link } from "lucide-react"
 
 // Sample photo data - replace with your actual photos
 const photos = [
@@ -12,47 +13,52 @@ const photos = [
     src: "/placeholder.svg?height=600&width=800",
     alt: "Landscape photo",
     category: "Landscape",
-    image:"images/Photography/CSC_8389.jpg"
+    image:"images/Photography/WhatsApp Image 2025-03-29 à 13.09.24_f8301ecc.jpg",
+      Link:"https://www.instagram.com/p/CwPSTG8t8NY/"
   },
   {
     id: 2,
     src: "/placeholder.svg?height=800&width=600",
     alt: "Portrait photo",
     category: "Portrait",
-    image:"images/Photography/CSC_8389.jpg"
+    image:"images/Photography/WhatsApp Image 2025-03-29 à 13.09.29_3a277fde.jpg",
+      Link:"https://www.instagram.com/p/DHth50FNR5i/?img_index=1"
   },
   {
     id: 3,
     src: "/placeholder.svg?height=600&width=800",
     alt: "Street photo",
-    category: "Street",
-    image:"images/Photography/CSC_8389.jpg"
+    category: "Portrait",
+    image:"images/Photography/DSC_8532.jpg",
+      Link:"https://www.instagram.com/p/C_XsAV1txuJ/?img_index=1"
   },
   {
     id: 4,
     src: "/placeholder.svg?height=800&width=600",
     alt: "Architecture photo",
-    category: "Architecture",
-    image:"images/Photography/CSC_8389.jpg"
+    category: "Travel",
+    image:"images/Photography/WhatsApp Image 2025-03-29 à 13.09.24_741311f9.jpg",
+      Link:"https://www.instagram.com/p/CtqjhYONnGv/"
   },
   {
     id: 5,
     src: "/placeholder.svg?height=600&width=800",
-    alt: "Nature photo",
-    category: "Nature",
-    image:"images/Photography/CSC_8389.jpg"
+    alt: "Travel photo",
+    category: "Travel",
+    image:"images/Photography/WhatsApp Image 2025-03-29 à 13.09.23_31f9d015.jpg",
+    Link:"https://www.instagram.com/p/C_0XsfVIjPE/"
   },
   {
     id: 6,
     src: "/placeholder.svg?height=800&width=600",
     alt: "Travel photo",
     category: "Travel",
-    image:"images/Photography/CSC_8389.jpg"
+    image:"images/Photography/WhatsApp Image 2025-03-29 à 13.09.24_726130a0.jpg",
+    Link:"https://www.instagram.com/p/C49EZWltadk/"
   },
 ]
 
 export function PhotoGallery() {
-  const [selectedPhoto, setSelectedPhoto] = useState<(typeof photos)[0] | null>(null)
   const [filter, setFilter] = useState<string>("All")
   const [activeIndex, setActiveIndex] = useState(-1)
   const galleryRef = useRef<HTMLDivElement>(null)
@@ -160,7 +166,7 @@ export function PhotoGallery() {
               "relative aspect-square overflow-hidden rounded-md cursor-pointer group gallery-item",
               "transition-all duration-500 ease-out",
             )}
-            onClick={() => setSelectedPhoto(photo)}
+            onClick={() => window.open(photo.Link, "_blank")}
             style={{
               transitionDelay: `${index * 50}ms`,
               transform: "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)",
@@ -181,25 +187,6 @@ export function PhotoGallery() {
           </div>
         ))}
       </div>
-
-      <Dialog open={!!selectedPhoto} onOpenChange={(open) => !open && setSelectedPhoto(null)}>
-        <DialogContent className="max-w-3xl p-0 overflow-hidden">
-          {selectedPhoto && (
-            <div className="relative h-[80vh]">
-              <Image
-                src={selectedPhoto.image || "/placeholder.svg"}
-                alt={selectedPhoto.alt}
-                fill
-                className="object-contain"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/70">
-                <p className="text-white">{selectedPhoto.alt}</p>
-                <p className="text-white/70 text-sm">{selectedPhoto.category}</p>
-              </div>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
     </div>
   )
 }
