@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { ProjectCard } from "@/components/project-card"
+import { CompetitionCard } from "@/components/competition-card"
 import { PhotoGallery } from "@/components/photo-gallery"
 import { ContactForm } from "@/components/contact-form"
 import { Github, Linkedin, Mail, Camera } from "lucide-react"
@@ -33,6 +34,9 @@ export default function Home() {
                 </Link>
                 <Link href="#projects" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 Projects
+                </Link>
+                <Link href="#competitions" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
+                Competitions
                 </Link>
                 <Link href="#certifications" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 Certifications
@@ -180,6 +184,8 @@ export default function Home() {
                     <li className="mb-3">
                       <strong>Djerba Midoun High School</strong><br />
                       <span className="text-sm text-muted-foreground">Sep 2020 - Jun 2023</span>
+                      <p className="text-sm">Earned a Baccalaureate in Computer Science with Honors (Très Bien).</p>
+
                     </li>
                     <li>
                       <strong>Higher Institute of Informatics of Mahdia</strong><br />
@@ -195,6 +201,11 @@ export default function Home() {
                       <span className="text-sm text-muted-foreground">Jan 2025 - Present</span><br />
                       <p className="text-sm">Collaborating on various freelance projects, including e-commerce websites, portfolios, and custom web applications.</p>
                     </li>
+                    <li className="mb-3">
+                      <strong>Organizer Member (GDSC, ISIMA)</strong><br />
+                      <span className="text-sm text-muted-foreground">Sep 2024 - Present</span><br />
+                      <p className="text-sm">Helping organize events and workshops focused on software development and technology, fostering a collaborative learning environment for students.</p>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -209,6 +220,8 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
               <ProjectCard
                 title="E-Commerce Platform"
                 description="A full-stack MERN application designed for seamless online shopping experiences. This platform includes user authentication, product management, and a dynamic shopping cart. With an intuitive UI powered by Tailwind CSS, users can browse, search, and manage products effortlessly. The backend ensures secure data handling and efficient API communication using Express and MongoDB."
@@ -223,13 +236,7 @@ export default function Home() {
                 image="/images/Projects/jobify.png"
                 link="#"
               />
-              <ProjectCard
-                title="Social Media Dashboard"
-                description="Analytics dashboard that aggregates data from multiple social media platforms."
-                tags={["React", "Chart.js", "Node.js", "API Integration"]}
-                image="/placeholder.svg?height=200&width=400"
-                link="#" 
-              />
+             
             </div>
             <div className="text-center mt-8">
               <Button variant="outline" asChild>
@@ -239,6 +246,42 @@ export default function Home() {
               </Button>
             </div>
           </section>
+
+          {/* Competitions Section */}
+        <section id="competitions" className="py-16">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold mb-4">Competitions & Workshops</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A showcase of my participation in hackathons, tech events, and skill-enhancing workshops.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <CompetitionCard 
+              title="Hackathon Participant (MICMINDS) – 12/2023"
+              description="Developed a website for a Tunisian cake company within 24 hours, applying rapid problem-solving and teamwork."
+              tags={["Web Development", "Teamwork", "Fast Prototyping"]}
+              image="/images/competitions/hack.jpg"
+              link="#"
+            />
+            <CompetitionCard 
+              title="Hackathon Organizer (HackMingle 2.0) – 03/2025"
+              description="Coordinated a hackathon focused on Education, Economy, and Sustainability, fostering innovation among participants."
+              tags={["Event Management", "Leadership", "Community Engagement"]}
+              image="/images/competitions/HackMing.jpg"
+              link="#"
+            />
+            <CompetitionCard 
+              title="GDG Tech Days 2025 (EPI Digital School, Sousse)"
+              description="Completed an intensive 4-week Web Track Workshop covering web fundamentals, React, API integration, and best practices."
+              tags={["React", "API Integration", "Web Best Practices"]}
+              image="/images/competitions/gdg1.jpeg"
+              link="#"
+            />
+          </div>
+
+        </section>
+
 
 
           {/* Certifications Section */}
