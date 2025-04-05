@@ -15,6 +15,7 @@ export function ContactForm() {
     subject: "",
     message: ""
   });
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
@@ -26,24 +27,41 @@ export function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
+    // Send the main email to yourself (using the original template)
     emailjs.send(
       'service_cx013wb', 
-      'template_8oksmj6', 
+      'template_8oksmj6',  // Your original template ID (this sends the message to you)
       formData, 
       'qQ530j6L2xIHoQJm-'
     )
     .then(() => {
       setSubmitSuccess(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setSubmitSuccess(false), 3000);
+  
+      // Send the auto-reply to the user (using the auto-reply template)
+      emailjs.send(
+        'service_cx013wb',  // Same service ID
+        'template_nsfd3xn',  // Auto-reply template ID
+        {
+          name: formData.name, // The name of the user
+          email: formData.email, // The user's email to send the auto-reply to
+          message: `Thank you for reaching out! We have received your message and will get back to you soon.` // Custom message for the user
+        },
+        'qQ530j6L2xIHoQJm-'  // Your user-specific EmailJS user ID
+      )
+      .catch((error) => {
+        console.error("Auto-reply Error:", error); // Log any errors that occur during the auto-reply process
+      });
+  
+      setTimeout(() => setSubmitSuccess(false), 3000); // Hide success message after 3 seconds
     })
     .catch((error) => {
-      console.error("EmailJS Error:", error);
+      console.error("EmailJS Error:", error); // Log any errors that occur during the main email sending process
     })
-    .finally(() => setIsSubmitting(false));
+    .finally(() => setIsSubmitting(false)); // Reset the submitting state once everything is done
   };
-
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <Card>
