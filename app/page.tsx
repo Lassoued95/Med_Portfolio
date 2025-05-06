@@ -236,6 +236,14 @@ export default function Home() {
                 image="/images/Projects/jobify.png"
                 link="#"
               />
+              <ProjectCard
+                title="Heart Disease Prediction"
+                description="An AI-powered web app that predicts heart disease risk using a Random Forest model. Built with Next.js and Flask, and deployed on Vercel (frontend) and Render (backend), it provides fast and accurate health insights based on user input."
+                tags={["Next.js", "Flask", "Random Forest", "Tailwind CSS", "Vercel", "Render"]}
+                image="/images/Projects/disease.png"
+                link="https://heart-disease-prediction-psi-ten.vercel.app/"
+              />
+
              
             </div>
             <div className="text-center mt-8">
