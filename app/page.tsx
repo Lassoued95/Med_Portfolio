@@ -243,6 +243,14 @@ export default function Home() {
                 image="/images/Projects/disease.png"
                 link="https://heart-disease-prediction-psi-ten.vercel.app/"
               />
+                <ProjectCard
+                  title="DjerbaGo – Smart Travel Recommender"
+                  description="An interactive Streamlit web app that helps tourists discover the best activities in Djerba based on preferences like category, age, mood, and duration. Features a dynamic map, CSV export, favorites, and itinerary planning. Designed to enhance the visitor experience with smart recommendations."
+                  tags={["Streamlit", "Python", "Pandas", "Folium", "Tailwind Design"]}
+                  image="/images/Projects/DjerbaGo.png"
+                  link="https://djerbago-med.streamlit.app"
+        />
+
 
              
             </div>
