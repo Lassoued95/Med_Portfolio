@@ -263,7 +263,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Competitions Section */}
+          {/* Competitions  Section */}
         <section id="competitions" className="py-16">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Competitions & Workshops</h2>
