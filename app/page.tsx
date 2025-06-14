@@ -251,6 +251,15 @@ export default function Home() {
                   link="https://djerbago-med.streamlit.app"
         />
 
+            <ProjectCard
+            title="Example Todos App with CopilotKit"
+            description="A modern React-based todo application featuring task management with add, update, and delete functionalities. Integrated with CopilotKit for AI-powered assistant capabilities to help users manage tasks more efficiently."
+            tags={["React", "TypeScript", "CopilotKit", "Framer Motion", "Tailwind CSS"]}
+            image="/images/Projects/todos.png"
+            link="https://todos-blue-eight.vercel.app"
+          />
+
+
 
              
             </div>
