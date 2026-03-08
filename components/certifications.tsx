@@ -25,16 +25,38 @@ export function Certifications() {
 
   // Certifications data with the new GDG Tech Days certificate
   const certifications: Certification[] = [
+     {
+      title: "Fundamentals of Deep Learning - Nvidia",
+      issuer: "Google Developer Groups Sousse",
+      date: "December 2025",
+      description:
+        "Completed the Fundamentals of Deep Learning course with Nvidia, gaining a solid foundation in neural networks and deep learning concepts.",
+      skills: ["Deep Learning", "Neural Networks", "Python", "TensorFlow"],
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7401366575112429569/",
+      image: "/images/Certifications/nvidia.png",
+    },
     {
-      title: "GDG Tech Days Web Track",
+      title: "Generative AI Udemy Course",
+      issuer: "Generative AI Course with Langchain and Hugging Face",
+      date: "November 2025",
+      description:
+        "Completed the Generative AI course on Udemy, gaining hands-on experience with Langchain and Hugging Face to build and deploy AI models effectively.",
+      skills: ["Generative AI", "Langchain", "Hugging Face", "Model Deployment"],
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7397348383063158785/",
+      image: "/images/Certifications/udemy.png",
+    },
+
+     {
+      title: "Web Track - GDG Tech Days",
       issuer: "Google Developer Groups Sousse",
       date: "February 2025",
       description:
-        "Completed the Web Track Workshops at GDG Tech Days 2025, focusing on modern web development technologies and practices.",
-      skills: ["Web Development", "JavaScript", "Collaboration", "Hands-on Learning"],
-      link: "https://www.linkedin.com/posts/mohamed-lassoued-a5b5b8243_gdgtechdays-activity-7304889503456870401-sqbR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADxsYucBLVSHo2fZe3H1kplzkPNGUtkMTTg",
-      image: "/images/Certifications/GDG_Certif.png",
+        "Competited in the Web Track of GDG Tech Days, showcasing skills in web development and modern technologies. This certificate recognizes active participation and contribution to the event.",
+      skills: ["Web Development", "JavaScript", "React", "Problem-Solving"],
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7304889503456870401/",
+      image: "/images/Certifications/gdg.png",
     },
+   
     {
       "title": "Flutter Workshop Participant",
       "issuer": "GDG RandoTek",

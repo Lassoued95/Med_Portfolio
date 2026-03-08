@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { ProjectCard } from "@/components/project-card"
 import { CompetitionCard } from "@/components/competition-card"
-import { PhotoGallery } from "@/components/photo-gallery"
 import { ContactForm } from "@/components/contact-form"
 import { Github, Linkedin, Mail, Camera } from "lucide-react"
 import { ThemeDebug } from "@/components/theme-debug"
@@ -41,8 +40,8 @@ export default function Home() {
                 <Link href="#certifications" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 Certifications
                 </Link>
-                <Link href="#photography" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
-                Photography
+                <Link href="#internships" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
+                Internships
                 </Link>
                 <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4 scroll-smooth">
                 Contact
@@ -75,9 +74,9 @@ export default function Home() {
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">Mohamed Lassoued</h1>
-            <p className="text-2xl font-medium text-primary mb-2">MERN Stack Developer & Photographer</p>
+            <p className="text-2xl font-medium text-primary mb-2">MERN Stack Developer</p>
             <p className="text-xl text-muted-foreground max-w-2xl mb-8">
-              Creating beautiful digital experiences through code and capturing moments through the lens.
+              Creating beautiful digital experiences through code.
             </p>
             <div className="flex gap-4">
               <Button asChild>
@@ -117,18 +116,16 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl font-bold mb-4 flex justify-center">About Me</h2>
                 <p className="text-muted-foreground mb-4">
-                  I'm Mohamed Lassoued, a passionate MERN Stack developer and photographer based in Tunisia. I combine
-                  technical expertise with creative vision to build beautiful digital experiences and capture compelling
-                  visual stories.
+                  I'm Mohamed Lassoued, a passionate MERN Stack developer based in Tunisia. I combine technical expertise
+                  with creative problem solving to build beautiful and reliable digital experiences.
                 </p>
                 <p className="text-muted-foreground mb-4">
                   With several years of experience in web development, I specialize in creating responsive,
-                  user-friendly applications using MongoDB, Express, React, and Node.js. My photography work focuses on
-                  capturing authentic moments and creative compositions.
+                  user-friendly applications using MongoDB, Express, React, and Node.js.
                 </p>
                 <p className="text-muted-foreground">
-                  When I'm not coding or behind the camera, you can find me exploring new technologies, contributing to
-                  open-source projects, and continuously expanding my skills in both development and photography.
+                  When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
+                  and continuously expanding my skills across software development.
                 </p>
 
                 <div className="mt-6">
@@ -321,16 +318,26 @@ export default function Home() {
             <Certifications />
           </section>
 
-            {/* Photography Section */}
-            <section id="photography" className="py-16">
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">Photography Portfolio</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Capturing moments and emotions through the lens. Here's a selection of my photographic work.
-              </p>
-            </div>
-            <PhotoGallery />
-          </section>
+            {/* Internships Section */}
+            <section id="internships" className="py-16">
+              <div className="mb-12 text-center">
+                <h2 className="text-3xl font-bold mb-4">Internships</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Professional experiences where I applied my skills in real-world settings and grew as a developer.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <ProjectCard
+                  title="Software Development Intern"
+                  description="Worked on building and optimizing web applications using the MERN stack, collaborating with a team to deliver high-quality solutions."
+                  tags={["MERN", "TypeScript", "Tailwind", "CI/CD"]}
+                  image="/images/Internships/stage.jpeg"
+                  imageContainerClassName="h-[520px] w-[400px]"
+                  link="#"
+                />
+               
+              </div>
+            </section>
 
           {/* Contact Section */}
           <section id="contact" className="py-16">

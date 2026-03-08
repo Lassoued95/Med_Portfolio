@@ -13,9 +13,13 @@ interface ProjectCardProps {
   tags: string[]
   image: string
   link: string
+  /**
+   * Optional custom class for the image container (e.g. "h-80" or "aspect-[3/4]").
+   */
+  imageContainerClassName?: string
 }
 
-export function ProjectCard({ title, description, tags, image, link }: ProjectCardProps) {
+export function ProjectCard({ title, description, tags, image, link, imageContainerClassName }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -24,7 +28,7 @@ export function ProjectCard({ title, description, tags, image, link }: ProjectCa
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className={`relative w-full overflow-hidden ${imageContainerClassName ?? "h-48"}`}>
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
