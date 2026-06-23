@@ -219,6 +219,16 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 
+                            <ProjectCard
+                  title="Umrah Fly"
+                  description="A comprehensive mobile platform designed to streamline Umrah pilgrimage management for travelers and agencies. The app integrates an AI-powered assistant with RAG (Retrieval-Augmented Generation) for instant, context-aware guidance, voice interaction via speech-to-text, and a two-layer content moderation system. Built with React Native and a robust Node.js/Express backend, the platform leverages PostgreSQL with vector embeddings for intelligent search, all containerized with Docker and deployed on Azure with full CI/CD automation."
+                  tags={["React Native", "Node.js", "Python", "FastAPI", "PostgreSQL", "Docker", "AI/RAG"]}
+                  image="/video/demo.mov"
+                  link="https://github.com/your-repo/umrah-fly"
+                />
+
+
+
               <ProjectCard
                 title="E-Commerce Platform"
                 description="A full-stack MERN application designed for seamless online shopping experiences. This platform includes user authentication, product management, and a dynamic shopping cart. With an intuitive UI powered by Tailwind CSS, users can browse, search, and manage products effortlessly. The backend ensures secure data handling and efficient API communication using Express and MongoDB."
@@ -332,7 +342,7 @@ export default function Home() {
                   description="Worked on building and optimizing web applications using the MERN stack, collaborating with a team to deliver high-quality solutions."
                   tags={["MERN", "TypeScript", "Tailwind", "CI/CD"]}
                   image="/images/Internships/stage.jpeg"
-                  imageContainerClassName="h-[520px] w-[400px]"
+                  imageContainerClassName="h-[520px] w-[450px]"
                   link="#"
                 />
                
