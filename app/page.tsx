@@ -223,7 +223,8 @@ export default function Home() {
                   title="Umrah Fly"
                   description="A comprehensive mobile platform designed to streamline Umrah pilgrimage management for travelers and agencies. The app integrates an AI-powered assistant with RAG (Retrieval-Augmented Generation) for instant, context-aware guidance, voice interaction via speech-to-text, and a two-layer content moderation system. Built with React Native and a robust Node.js/Express backend, the platform leverages PostgreSQL with vector embeddings for intelligent search, all containerized with Docker and deployed on Azure with full CI/CD automation."
                   tags={["React Native", "Node.js", "Python", "FastAPI", "PostgreSQL", "Docker", "AI/RAG"]}
-                  image="/video/demo.mov"
+                  image="/images/Projects/pfe.png"
+                  imageContainerClassName="h-[720px] w-[350px] "
                   link="https://github.com/your-repo/umrah-fly"
                 />
 
