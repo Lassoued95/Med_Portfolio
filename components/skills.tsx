@@ -5,8 +5,11 @@ import { Progress } from "@/components/ui/progress"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
+import {useFormatter, useTranslations} from "next-intl"
 
 export function Skills() {
+  const t = useTranslations("skills")
+  const formatter = useFormatter()
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [animatedValues, setAnimatedValues] = useState<Record<string, number>>({})
@@ -21,11 +24,11 @@ export function Skills() {
   ]
 
   const photographySkills = [
-    { name: "Composition", level: 85 },
-    { name: "Lighting", level: 80 },
-    { name: "Post-Processing", level: 75 },
-    { name: "Portrait Photography", level: 85 },
-    { name: "Landscape Photography", level: 90 },
+    { name: t("composition"), level: 85 },
+    { name: t("lighting"), level: 80 },
+    { name: t("postProcessing"), level: 75 },
+    { name: t("portraitPhotography"), level: 85 },
+    { name: t("landscapePhotography"), level: 90 },
   ]
 
   useEffect(() => {
@@ -53,7 +56,7 @@ export function Skills() {
       <CardContent className="p-6">
         <div className="space-y-6">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Development Skills</h3>
+            <h3 className="text-xl font-semibold mb-4">{t("development")}</h3>
             <div className="space-y-4">
               {developmentSkills.map((skill, index) => (
                 <motion.div
@@ -65,7 +68,7 @@ export function Skills() {
                 >
                   <div className="flex justify-between">
                     <span className="text-sm font-medium">{skill.name}</span>
-                    <span className="text-sm text-muted-foreground">{animatedValues[skill.name] || 0}%</span>
+                    <span className="text-sm text-muted-foreground">{t("percent", {value: formatter.number(animatedValues[skill.name] || 0)})}</span>
                   </div>
                   <Progress value={animatedValues[skill.name] || 0} className="h-2" />
                 </motion.div>
@@ -74,7 +77,7 @@ export function Skills() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Photography Skills</h3>
+            <h3 className="text-xl font-semibold mb-4">{t("photography")}</h3>
             <div className="space-y-4">
               {photographySkills.map((skill, index) => (
                 <motion.div
@@ -86,7 +89,7 @@ export function Skills() {
                 >
                   <div className="flex justify-between">
                     <span className="text-sm font-medium">{skill.name}</span>
-                    <span className="text-sm text-muted-foreground">{animatedValues[skill.name] || 0}%</span>
+                    <span className="text-sm text-muted-foreground">{t("percent", {value: formatter.number(animatedValues[skill.name] || 0)})}</span>
                   </div>
                   <Progress value={animatedValues[skill.name] || 0} className="h-2" />
                 </motion.div>
@@ -98,4 +101,3 @@ export function Skills() {
     </Card>
   )
 }
-

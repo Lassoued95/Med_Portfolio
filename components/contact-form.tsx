@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, type ChangeEvent, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,6 +10,7 @@ import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 
 export function ContactForm() {
+  const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,12 +21,12 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
   
@@ -46,7 +48,7 @@ export function ContactForm() {
         {
           name: formData.name, // The name of the user
           email: formData.email, // The user's email to send the auto-reply to
-          message: `Thank you for reaching out! We have received your message and will get back to you soon.` // Custom message for the user
+          message: t("autoReply")
         },
         'qQ530j6L2xIHoQJm-'  // Your user-specific EmailJS user ID
       )
@@ -68,25 +70,25 @@ export function ContactForm() {
         <CardContent className="p-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
-              <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Your email" required />
+              <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder={t("name")} aria-label={t("name")} required />
+              <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder={t("email")} aria-label={t("email")} required />
             </div>
-            <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Subject" required />
-            <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Your message" rows={5} required />
-            <Button type="submit" className="w-full" disabled={isSubmitting}>{isSubmitting ? "Sending..." : "Send Message"}</Button>
-            {submitSuccess && <p className="text-green-600 text-center">Message sent successfully!</p>}
+            <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder={t("subject")} aria-label={t("subject")} required />
+            <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder={t("message")} aria-label={t("message")} rows={5} required />
+            <Button type="submit" className="w-full" disabled={isSubmitting}>{isSubmitting ? t("sending") : t("send")}</Button>
+            {submitSuccess && <p className="text-green-600 text-center" role="status">{t("success")}</p>}
           </form>
         </CardContent>
       </Card>
       <div className="space-y-6">
-        <h3 className="text-xl font-semibold">Contact Information</h3>
+        <h3 className="text-xl font-semibold">{t("information")}</h3>
         <div className="space-y-4">
           <div className="flex items-start gap-3"><Mail className="h-5 w-5 text-primary mt-0.5" /><p>lassouedmohamed2004@gmail.com</p></div>
           <div className="flex items-start gap-3"><Phone className="h-5 w-5 text-primary mt-0.5" /><p>(+216) 25 740 872</p></div>
           <div className="flex items-start gap-3"><MapPin className="h-5 w-5 text-primary mt-0.5" /><p>Djerba, Medenine</p></div>
         </div>
         <div className="pt-4">
-          <h3 className="text-xl font-semibold mb-3">Follow Me</h3>
+          <h3 className="text-xl font-semibold mb-3">{t("follow")}</h3>
           <div className="flex gap-3">
             <Button variant="outline" size="icon" asChild><a href="https://github.com/Lassoued95" target="_blank" rel="noopener noreferrer"><Github className="h-5 w-5" /></a></Button>
             <Button variant="outline" size="icon" asChild><a href="https://www.linkedin.com/in/mohamed-lassoued-a5b5b8243/" target="_blank" rel="noopener noreferrer"><Linkedin className="h-5 w-5" /></a></Button>

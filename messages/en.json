@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "resume": "Resume",
+    "projects": "Projects",
+    "competitions": "Events",
+    "certifications": "Certifications",
+    "internships": "Internships",
+    "contact": "Contact",
+    "cta": "Get in Touch",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "primaryNavigation": "Primary navigation",
+    "mobileNavigation": "Mobile navigation"
+  },
+  "hero": {
+    "role": "Full-Stack & Mobile Developer",
+    "description": "Master’s student in Data Science, building web, mobile and data-driven applications.",
+    "downloadCv": "Download CV",
+    "contactMe": "Contact Me",
+    "portraitAlt": "Portrait of Mohamed Lassoued"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I’m Mohamed Lassoued, a Master’s student in Data Science at ISI Mahdia and a full-stack and mobile developer from Djerba, Tunisia. I build web and mobile applications as well as data-driven solutions, with a strong focus on user experience.",
+    "paragraph2": "Since 2025, I’ve worked as a freelance web developer. I also completed my final-year internship at Wyze Academy in France, where I built Umrah Fly, a React Native app with an AI assistant. I’m also exploring Big Data with Hadoop, MapReduce and Apache Iceberg.",
+    "paragraph3": "Alongside development, I run DjerbaLens, my travel photography brand, and work in visual communication and social media for tourism agencies in Djerba."
+  },
+  "skills": {
+    "web": "Web Technologies & Frameworks",
+    "mobile": "Mobile",
+    "backend": "Backend & Databases",
+    "bigDataAi": "Big Data & AI",
+    "languages": "Programming Languages",
+    "tools": "Tools & DevOps",
+    "development": "Development Skills",
+    "photography": "Photography Skills",
+    "composition": "Composition",
+    "lighting": "Lighting",
+    "postProcessing": "Post-Processing",
+    "portraitPhotography": "Portrait Photography",
+    "landscapePhotography": "Landscape Photography",
+    "percent": "{value}%"
+  },
+  "projects": {
+    "title": "Development Projects",
+    "description": "A selection of my recent work across web, mobile, AI and Big Data.",
+    "viewMore": "View More on GitHub",
+    "viewProject": "View Project",
+    "openVideo": "Open {title} video",
+    "items": {
+      "umrahFly": {
+        "title": "Umrah Fly",
+        "description": "A mobile platform designed to streamline Umrah pilgrimage management for travelers and agencies. It integrates an AI assistant with RAG for instant, context-aware guidance, voice interaction through speech recognition, and two-layer content moderation. Built with React Native and a Node.js/Express backend, it uses PostgreSQL and vector embeddings for search, n8n automation, Docker containers and an Azure deployment."
+      },
+      "amazonReviews": {
+        "title": "Amazon Reviews – Big Data Analysis",
+        "description": "Master’s project completed in a pair: distributed analysis of the Amazon Reviews 2023 dataset (Appliances) using three Java Hadoop MapReduce jobs and Apache Iceberg tables, in a Docker environment with HDFS, YARN and Spark."
+      },
+      "scooterDjerba": {
+        "title": "Scooter Djerba – Rental Website",
+        "description": "A freelance scooter rental website built for a Djerba agency. It supports online bookings and automatically emails the agency when a customer submits a request."
+      },
+      "djerbaLens": {
+        "title": "DjerbaLens – Photography Platform",
+        "description": "A web platform for my travel photography brand focused on Djerba and Tunisia, with a dynamic gallery, client reviews, contact form and AI chatbot. An n8n workflow automates social publishing by generating captions with an LLM and posting them to Instagram."
+      },
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "A full-stack MERN application for a seamless online shopping experience, featuring authentication, product management and a dynamic cart. Its Tailwind CSS interface makes it easy to browse, search and manage products, while the backend secures data and API communication with Express and MongoDB."
+      },
+      "jobify": {
+        "title": "Jobify – Smart Job Tracker",
+        "description": "A modern application for managing job applications efficiently, with real-time updates, intuitive filters and a clear organization system to keep your job search on track."
+      },
+      "heartDisease": {
+        "title": "Heart Disease Prediction",
+        "description": "An AI-powered web app that estimates heart disease risk using a Random Forest model. Built with Next.js and Flask and deployed on Vercel and Render, it provides quick results based on user input."
+      },
+      "djerbaGo": {
+        "title": "DjerbaGo – Smart Travel Recommender",
+        "description": "An interactive Streamlit app that helps visitors discover activities in Djerba based on preferences such as category, age, mood and duration. It features a dynamic map, CSV export, favorites and itinerary planning to improve the visitor experience."
+      },
+      "todos": {
+        "title": "CopilotKit Todo App",
+        "description": "A React task-management app for adding, updating and deleting tasks. CopilotKit adds AI assistant capabilities to make organizing tasks easier."
+      }
+    }
+  },
+  "internships": {
+    "title": "Internships",
+    "description": "Professional experiences where I applied my skills in real-world settings and grew as a developer.",
+    "items": {
+      "wyze": {
+        "title": "Final-Year Internship – Wyze Academy (France)",
+        "description": "Final-year internship building Umrah Fly, a React Native app with an AI assistant (RAG), a Node.js/Express and FastAPI backend, PostgreSQL and n8n automation. Delivered over four sprints, from Figma mockups through deployment."
+      },
+      "activitesLoisirs": {
+        "title": "Web Development Intern – Activités et Loisirs, Djerba",
+        "description": "Summer 2025 internship: designed and developed the agency website and an interactive web platform with the MERN stack."
+      },
+      "viewDetails": "View details",
+      "enlarge": "Enlarge document",
+      "close": "Close"
+    }
+  },
+  "education": {
+    "resumeTitle": "My Resume",
+    "resumeDescription": "A quick look at my educational background and professional experience.",
+    "educationTitle": "Education",
+    "experienceTitle": "Work Experience",
+    "masters": "Master’s in Data Science – Higher Institute of Informatics of Mahdia",
+    "bachelor": "Bachelor’s in Computer Science, Software Engineering & Information Systems – Higher Institute of Informatics of Mahdia",
+    "highSchool": "Djerba Midoun High School",
+    "baccalaureate": "Earned a Baccalaureate in Computer Science with Honors (Très Bien).",
+    "socialMediaManager": "Social Media Manager – Activités et Loisirs, Djerba",
+    "socialMediaDescription": "Managing the agency’s social media through content creation and community engagement.",
+    "freelanceDeveloper": "Freelance Web Developer",
+    "freelanceDescription": "Building websites, e-commerce stores and booking platforms, including a scooter rental site for a Djerba agency.",
+    "organizer": "Organizer Member (GDSC, ISIMA)",
+    "organizerDescription": "Helping organize events and workshops focused on software development and technology, fostering a collaborative learning environment for students.",
+    "competitionsTitle": "Competitions & Workshops",
+    "competitionsDescription": "A selection of hackathons, tech events and skill-building workshops I’ve taken part in.",
+    "certificationsTitle": "My Certifications",
+    "certificationsDescription": "Professional certifications and courses I’ve completed to build my skills.",
+    "viewCertificate": "View Certificate",
+    "competitions": {
+      "micminds": {
+        "title": "MICMINDS Hackathon Participant – 12/2023",
+        "description": "Built a website for a Tunisian cake company in 24 hours, applying rapid problem-solving and teamwork."
+      },
+      "hackmingle": {
+        "title": "HackMingle 2.0 Hackathon Organizer – 03/2025",
+        "description": "Coordinated a hackathon focused on education, the economy and sustainability, fostering innovation among participants."
+      },
+      "gdg": {
+        "title": "GDG Tech Days 2025 (EPI Digital School, Sousse)",
+        "description": "Completed an intensive four-week Web Track workshop covering web fundamentals, React, API integration and best practices."
+      }
+    },
+    "certifications": {
+      "deepLearning": {
+        "title": "Fundamentals of Deep Learning – NVIDIA",
+        "issuer": "Google Developer Groups Sousse",
+        "description": "Completed NVIDIA’s Fundamentals of Deep Learning course, building a solid foundation in neural networks and deep learning concepts."
+      },
+      "generativeAi": {
+        "title": "Generative AI Course – Udemy",
+        "issuer": "Generative AI Course with LangChain and Hugging Face",
+        "description": "Gained hands-on experience with LangChain and Hugging Face to build and deploy AI models."
+      },
+      "webTrack": {
+        "title": "Web Track – GDG Tech Days",
+        "issuer": "Google Developer Groups Sousse",
+        "description": "Took part in the GDG Tech Days Web Track, demonstrating skills in web development and modern technologies."
+      },
+      "flutter": {
+        "title": "Flutter Workshop Participant",
+        "issuer": "GDG RandoTek",
+        "description": "Participated in the Flutter workshop organized by GDG RandoTek in Sousse, covering app development, best practices and modern tools for smooth, high-performance mobile apps."
+      },
+      "micminds": {
+        "title": "MICMINDS Hackathon Participant",
+        "issuer": "Microsoft ISIMA Club",
+        "description": "Participated in the MICMINDS Hackathon, demonstrating dedication, creativity and problem-solving during the 24-hour event."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Interested in working together? Fill out the form or reach out directly by email or on social media.",
+    "name": "Your name",
+    "email": "Your email",
+    "subject": "Subject",
+    "message": "Your message",
+    "sending": "Sending…",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "information": "Contact Information",
+    "follow": "Follow Me",
+    "autoReply": "Thank you for reaching out! I’ve received your message and will get back to you soon."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "toggleTheme": "Toggle theme",
+    "currentTheme": "Current theme",
+    "resolvedTheme": "Resolved theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "language": "Language",
+    "openVideo": "Open",
+    "closeVideo": "Close video",
+    "enlarge": "Enlarge",
+    "close": "Close",
+    "certificateAlt": "{title} certificate",
+    "skipIntro": "Skip Intro",
+    "present": "Present"
+  }
+}

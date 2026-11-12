@@ -5,8 +5,10 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { TechBackground } from "./tech-background"
+import {useTranslations} from "next-intl"
 
 export function PortfolioReveal({ children }: { children: React.ReactNode }) {
+  const t = useTranslations("common")
   const [showPortfolio, setShowPortfolio] = useState(false)
 
   // Listen for PC click event
@@ -45,11 +47,10 @@ export function PortfolioReveal({ children }: { children: React.ReactNode }) {
             onClick={() => setShowPortfolio(true)}
             className="bg-primary text-primary-foreground px-4 py-2 rounded-md shadow-md hover:bg-primary/90 transition-colors"
           >
-            Skip Intro
+            {t("skipIntro")}
           </button>
         </div>
       )}
     </>
   )
 }
-

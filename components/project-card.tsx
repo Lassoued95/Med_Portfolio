@@ -13,13 +13,28 @@ interface ProjectCardProps {
   tags: string[]
   image: string
   link: string
+  viewLabel: string
+  openLabel: string
+  openVideoLabel: string
+  closeVideoLabel: string
   /**
    * Optional custom class for the image container (e.g. "h-80" or "aspect-[3/4]").
    */
   imageContainerClassName?: string
 }
 
-export function ProjectCard({ title, description, tags, image, link, imageContainerClassName }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  description,
+  tags,
+  image,
+  link,
+  viewLabel,
+  openLabel,
+  openVideoLabel,
+  closeVideoLabel,
+  imageContainerClassName
+}: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   const isVideo = !!image && /\.(mp4|mov|webm)$/i.test(image)
@@ -42,7 +57,7 @@ export function ProjectCard({ title, description, tags, image, link, imageContai
                 window.open(image, "_blank", "noopener,noreferrer")
               }
             }}
-            aria-label={`Open ${title} video`}
+            aria-label={openVideoLabel}
             className="relative block w-full h-full"
           >
             <video
@@ -54,7 +69,7 @@ export function ProjectCard({ title, description, tags, image, link, imageContai
               className={`absolute inset-0 w-full h-full object-contain transition-transform duration-500 ${isHovered ? "scale-105" : "scale-100"}`}
             />
             <span className="absolute left-2 top-2 inline-flex items-center gap-2 rounded-full bg-black/60 px-2 py-1 text-xs">
-              ▶ Open
+              ▶ {openLabel}
             </span>
           </button>
         ) : (
@@ -79,7 +94,7 @@ export function ProjectCard({ title, description, tags, image, link, imageContai
         >
           <div className="relative" onClick={(e) => e.stopPropagation()}>
             <button
-              aria-label="Close video"
+              aria-label={closeVideoLabel}
               onClick={() => setShowModal(false)}
               className="absolute -top-4 -right-4 z-60 rounded-full bg-white p-1 shadow-lg"
             >
@@ -116,7 +131,7 @@ export function ProjectCard({ title, description, tags, image, link, imageContai
           href={link}
           className={`text-sm text-primary flex items-center gap-1 transition-all duration-300 ${isHovered ? "gap-2" : "gap-1"}`}
         >
-          View Project{" "}
+          {viewLabel}{" "}
           <ExternalLink
             className={`h-3 w-3 transition-transform duration-300 ${isHovered ? "translate-x-1" : "translate-x-0"}`}
           />
@@ -125,4 +140,3 @@ export function ProjectCard({ title, description, tags, image, link, imageContai
     </Card>
   )
 }
-

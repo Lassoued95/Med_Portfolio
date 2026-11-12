@@ -1,0 +1,206 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "resume": "Parcours",
+    "projects": "Projets",
+    "competitions": "Événements",
+    "certifications": "Certifications",
+    "internships": "Stages",
+    "contact": "Contact",
+    "cta": "Me contacter",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation",
+    "primaryNavigation": "Navigation principale",
+    "mobileNavigation": "Navigation mobile"
+  },
+  "hero": {
+    "role": "Développeur full-stack et mobile",
+    "description": "Étudiant en master Data Science, je conçois des applications web, mobiles et des solutions axées sur la donnée.",
+    "downloadCv": "Télécharger mon CV",
+    "contactMe": "Me contacter",
+    "portraitAlt": "Portrait de Mohamed Lassoued"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "paragraph1": "Je suis Mohamed Lassoued, étudiant en master Data Science à l’ISI de Mahdia et développeur full-stack et mobile originaire de Djerba, en Tunisie. Je crée des applications web et mobiles ainsi que des solutions orientées données, avec une attention particulière portée à l’expérience utilisateur.",
+    "paragraph2": "Depuis 2025, je travaille comme développeur web freelance. J’ai également réalisé mon projet de fin d’études chez Wyze Academy, en France, où j’ai développé Umrah Fly, une application React Native avec un assistant IA. Je m’intéresse aussi au Big Data avec Hadoop, MapReduce et Apache Iceberg.",
+    "paragraph3": "En parallèle du développement, je fais vivre DjerbaLens, ma marque de photographie de voyage, et je participe à la communication visuelle et aux réseaux sociaux d’agences touristiques à Djerba."
+  },
+  "skills": {
+    "web": "Technologies et frameworks web",
+    "mobile": "Mobile",
+    "backend": "Backend et bases de données",
+    "bigDataAi": "Big Data et IA",
+    "languages": "Langages de programmation",
+    "tools": "Outils et DevOps",
+    "development": "Compétences en développement",
+    "photography": "Compétences en photographie",
+    "composition": "Composition",
+    "lighting": "Éclairage",
+    "postProcessing": "Retouche photo",
+    "portraitPhotography": "Photographie de portrait",
+    "landscapePhotography": "Photographie de paysage",
+    "percent": "{value} %"
+  },
+  "projects": {
+    "title": "Projets de développement",
+    "description": "Une sélection de mes réalisations récentes en web, mobile, IA et Big Data.",
+    "viewMore": "Voir plus sur GitHub",
+    "viewProject": "Voir le projet",
+    "openVideo": "Ouvrir la vidéo de {title}",
+    "items": {
+      "umrahFly": {
+        "title": "Umrah Fly",
+        "description": "Une plateforme mobile conçue pour simplifier la gestion du pèlerinage de la Omra pour les voyageurs et les agences. Elle intègre un assistant IA avec RAG pour fournir des réponses contextualisées, une interaction vocale par reconnaissance de la parole et une modération des contenus à deux niveaux. Développée avec React Native et un backend Node.js/Express, elle s’appuie sur PostgreSQL et des embeddings vectoriels pour la recherche, avec des automatisations n8n, une conteneurisation Docker et un déploiement sur Azure."
+      },
+      "amazonReviews": {
+        "title": "Amazon Reviews – analyse Big Data",
+        "description": "Projet de master réalisé en binôme : analyse distribuée du jeu de données Amazon Reviews 2023 (catégorie Appliances) à l’aide de trois traitements Hadoop MapReduce écrits en Java et de tables Apache Iceberg, dans un environnement Docker avec HDFS, YARN et Spark."
+      },
+      "scooterDjerba": {
+        "title": "Scooter Djerba – site de location",
+        "description": "Site de location de scooters réalisé en freelance pour une agence de Djerba. Il propose la réservation en ligne et l’envoi automatique d’un e-mail à l’agence à chaque nouvelle demande."
+      },
+      "djerbaLens": {
+        "title": "DjerbaLens – plateforme photo",
+        "description": "Plateforme web de ma marque de photographie de voyage consacrée à Djerba et à la Tunisie : galerie dynamique, avis clients, formulaire de contact et chatbot IA. La publication sur les réseaux sociaux est automatisée par un workflow n8n qui génère des légendes avec un LLM et les publie sur Instagram."
+      },
+      "ecommerce": {
+        "title": "Plateforme e-commerce",
+        "description": "Application MERN full-stack pour une expérience d’achat en ligne fluide, avec authentification, gestion des produits et panier dynamique. Son interface Tailwind CSS permet de parcourir, rechercher et gérer les produits facilement ; le backend sécurise les données et les échanges API avec Express et MongoDB."
+      },
+      "jobify": {
+        "title": "Jobify – suivi de candidatures",
+        "description": "Application moderne pour organiser efficacement ses candidatures : mises à jour en temps réel, filtres intuitifs et suivi structuré pour garder le cap pendant sa recherche d’emploi."
+      },
+      "heartDisease": {
+        "title": "Prédiction des maladies cardiaques",
+        "description": "Application web basée sur l’IA qui estime le risque de maladie cardiaque à l’aide d’un modèle Random Forest. Développée avec Next.js et Flask, puis déployée sur Vercel et Render, elle fournit rapidement des résultats à partir des informations saisies."
+      },
+      "djerbaGo": {
+        "title": "DjerbaGo – recommandations de voyage",
+        "description": "Application Streamlit interactive qui aide les visiteurs à découvrir des activités à Djerba selon leurs préférences : catégorie, âge, humeur ou durée. Elle propose une carte dynamique, l’export CSV, des favoris et la préparation d’itinéraires pour enrichir l’expérience de visite."
+      },
+      "todos": {
+        "title": "Application de tâches avec CopilotKit",
+        "description": "Application de gestion de tâches en React permettant d’ajouter, de modifier et de supprimer des tâches. CopilotKit y apporte des fonctions d’assistance IA pour faciliter leur organisation."
+      }
+    }
+  },
+  "internships": {
+    "title": "Stages",
+    "description": "Des expériences professionnelles qui m’ont permis de mettre mes compétences en pratique et de progresser comme développeur.",
+    "items": {
+      "wyze": {
+        "title": "Projet de fin d’études – Wyze Academy (France)",
+        "description": "Stage de fin d’études consacré à Umrah Fly, une application mobile React Native avec assistant IA (RAG), backend Node.js/Express et FastAPI, PostgreSQL et automatisations n8n. Le projet a été mené en quatre sprints, des maquettes Figma jusqu’au déploiement."
+      },
+      "activitesLoisirs": {
+        "title": "Stage en développement web – Activités et Loisirs, Djerba",
+        "description": "Stage d’été 2025 : conception et développement du site de l’agence et d’une plateforme web interactive avec la stack MERN."
+      },
+      "viewDetails": "Voir les détails",
+      "enlarge": "Agrandir le document",
+      "close": "Fermer"
+    }
+  },
+  "education": {
+    "resumeTitle": "Mon parcours",
+    "resumeDescription": "Aperçu de mon parcours de formation et de mes expériences professionnelles.",
+    "educationTitle": "Formation",
+    "experienceTitle": "Expérience professionnelle",
+    "masters": "Master en Data Science – Institut supérieur d’informatique de Mahdia",
+    "bachelor": "Licence en informatique, génie logiciel et systèmes d’information – Institut supérieur d’informatique de Mahdia",
+    "highSchool": "Lycée de Midoun, Djerba",
+    "baccalaureate": "Baccalauréat en informatique, mention Très Bien.",
+    "socialMediaManager": "Responsable des réseaux sociaux – Activités et Loisirs, Djerba",
+    "socialMediaDescription": "Gestion des réseaux sociaux de l’agence : création de contenus et animation de la communauté.",
+    "freelanceDeveloper": "Développeur web freelance",
+    "freelanceDescription": "Création de sites web, de boutiques e-commerce et de plateformes de réservation, dont un site de location de scooters pour une agence de Djerba.",
+    "organizer": "Membre organisateur (GDSC, ISIMA)",
+    "organizerDescription": "Organisation d’événements et d’ateliers autour du développement logiciel et des nouvelles technologies, dans un esprit de partage et d’apprentissage collaboratif.",
+    "competitionsTitle": "Compétitions et ateliers",
+    "competitionsDescription": "Quelques hackathons, événements tech et ateliers auxquels j’ai participé.",
+    "certificationsTitle": "Certifications",
+    "certificationsDescription": "Certifications et formations suivies pour approfondir mes compétences.",
+    "viewCertificate": "Voir le certificat",
+    "competitions": {
+      "micminds": {
+        "title": "Participant au hackathon MICMINDS – 12/2023",
+        "description": "Création en 24 heures d’un site web pour une entreprise tunisienne de pâtisserie, en mobilisant résolution rapide de problèmes et travail d’équipe."
+      },
+      "hackmingle": {
+        "title": "Organisation du hackathon HackMingle 2.0 – 03/2025",
+        "description": "Coordination d’un hackathon consacré à l’éducation, à l’économie et au développement durable, pour encourager l’innovation des participants."
+      },
+      "gdg": {
+        "title": "GDG Tech Days 2025 (EPI Digital School, Sousse)",
+        "description": "Atelier intensif de quatre semaines sur le développement web : fondamentaux, React, intégration d’API et bonnes pratiques."
+      }
+    },
+    "certifications": {
+      "deepLearning": {
+        "title": "Fondamentaux du Deep Learning – NVIDIA",
+        "issuer": "Google Developer Groups Sousse",
+        "description": "Formation Fundamentals of Deep Learning de NVIDIA, avec une introduction solide aux réseaux de neurones et aux concepts du deep learning."
+      },
+      "generativeAi": {
+        "title": "Formation en IA générative – Udemy",
+        "issuer": "Formation en IA générative avec LangChain et Hugging Face",
+        "description": "Mise en pratique de LangChain et Hugging Face pour créer et déployer des modèles d’IA."
+      },
+      "webTrack": {
+        "title": "Parcours Web – GDG Tech Days",
+        "issuer": "Google Developer Groups Sousse",
+        "description": "Participation au parcours Web des GDG Tech Days, avec mise en valeur de compétences en développement web et technologies modernes."
+      },
+      "flutter": {
+        "title": "Participation à un atelier Flutter",
+        "issuer": "GDG RandoTek",
+        "description": "Atelier Flutter organisé par GDG RandoTek à Sousse : développement d’applications, bonnes pratiques et outils modernes pour créer des applications mobiles performantes."
+      },
+      "micminds": {
+        "title": "Participation au hackathon MICMINDS",
+        "issuer": "Microsoft ISIMA Club",
+        "description": "Participation au hackathon MICMINDS, saluant l’engagement, la créativité et la résolution de problèmes lors de cet événement de 24 heures."
+      }
+    }
+  },
+  "contact": {
+    "title": "Me contacter",
+    "description": "Envie de collaborer ? Écrivez-moi via le formulaire ou contactez-moi directement par e-mail ou sur les réseaux sociaux.",
+    "name": "Votre nom",
+    "email": "Votre e-mail",
+    "subject": "Objet",
+    "message": "Votre message",
+    "sending": "Envoi en cours…",
+    "send": "Envoyer le message",
+    "success": "Votre message a bien été envoyé !",
+    "information": "Coordonnées",
+    "follow": "Suivez-moi",
+    "autoReply": "Merci pour votre message ! Je l’ai bien reçu et je reviendrai vers vous au plus vite."
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "common": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "E-mail",
+    "toggleTheme": "Changer de thème",
+    "currentTheme": "Thème actuel",
+    "resolvedTheme": "Thème appliqué",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "themeSystem": "Système",
+    "language": "Langue",
+    "openVideo": "Ouvrir",
+    "closeVideo": "Fermer la vidéo",
+    "enlarge": "Agrandir",
+    "close": "Fermer",
+    "certificateAlt": "Certificat : {title}",
+    "skipIntro": "Passer l’introduction",
+    "present": "Aujourd’hui"
+  }
+}

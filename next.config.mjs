@@ -1,3 +1,5 @@
+import createNextIntlPlugin from "next-intl/plugin"
+
 let userConfig = undefined
 try {
   userConfig = await import('./v0-user-next.config')
@@ -8,7 +10,7 @@ try {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   images: {
     unoptimized: true,
@@ -21,6 +23,8 @@ const nextConfig = {
 }
 
 mergeConfig(nextConfig, userConfig)
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts")
 
 function mergeConfig(nextConfig, userConfig) {
   if (!userConfig) {
@@ -42,4 +46,4 @@ function mergeConfig(nextConfig, userConfig) {
   }
 }
 
-export default nextConfig
+export default withNextIntl(nextConfig)
