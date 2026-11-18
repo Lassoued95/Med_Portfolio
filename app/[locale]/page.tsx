@@ -160,6 +160,15 @@ export default function Home() {
                   <h3 className="mb-4 text-xl font-bold">{education("experienceTitle")}</h3>
                   <ul>
                     <li className="mb-3">
+                      <strong>{education("wyzeInternship")}</strong><br />
+                      <p className="text-sm">{education("wyzeDescription")}</p>
+                    </li>
+                    <li className="mb-3">
+                      <strong>{education("activitiesInternship")}</strong><br />
+                      <span className="text-sm text-muted-foreground">{formatRange("2025-06-01", "2025-07-31")}</span><br />
+                      <p className="text-sm">{education("activitiesDescription")}</p>
+                    </li>
+                    <li className="mb-3">
                       <strong>{education("socialMediaManager")}</strong><br />
                       <span className="text-sm text-muted-foreground">{formatToPresent("2026-07-01")}</span><br />
                       <p className="text-sm">{education("socialMediaDescription")}</p>

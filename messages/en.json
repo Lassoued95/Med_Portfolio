@@ -118,6 +118,10 @@
     "socialMediaDescription": "Managing the agency’s social media through content creation and community engagement.",
     "freelanceDeveloper": "Freelance Web Developer",
     "freelanceDescription": "Building websites, e-commerce stores and booking platforms, including a scooter rental site for a Djerba agency.",
+    "wyzeInternship": "Final-Year Internship – Wyze Academy (France)",
+    "wyzeDescription": "Development of the Umrah Fly mobile application.",
+    "activitiesInternship": "Web Intern – Activités et Loisirs, Djerba",
+    "activitiesDescription": "Developed the agency website using the MERN stack, creating a modern and interactive interface.",
     "organizer": "Organizer Member (GDSC, ISIMA)",
     "organizerDescription": "Helping organize events and workshops focused on software development and technology, fostering a collaborative learning environment for students.",
     "competitionsTitle": "Competitions & Workshops",
@@ -150,6 +154,16 @@
         "issuer": "Generative AI Course with LangChain and Hugging Face",
         "description": "Gained hands-on experience with LangChain and Hugging Face to build and deploy AI models."
       },
+      "rapidLlm": {
+  "title": "Rapid Application Development with Large Language Models (LLMs)",
+  "description": "Completed NVIDIA's Deep Learning Institute course on quickly building applications powered by large language models.",
+  "issuer": "NVIDIA"
+},
+"googleCloudAi": {
+  "title": "Building Data & AI Solutions on Google Cloud",
+  "description": "Completed all lessons and assessments of the 365 Data Science course on building data and AI solutions with Google Cloud.",
+  "issuer": "365 Data Science"
+},
       "webTrack": {
         "title": "Web Track – GDG Tech Days",
         "issuer": "Google Developer Groups Sousse",

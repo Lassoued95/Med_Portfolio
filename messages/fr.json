@@ -118,6 +118,10 @@
     "socialMediaDescription": "Gestion des réseaux sociaux de l’agence : création de contenus et animation de la communauté.",
     "freelanceDeveloper": "Développeur web freelance",
     "freelanceDescription": "Création de sites web, de boutiques e-commerce et de plateformes de réservation, dont un site de location de scooters pour une agence de Djerba.",
+    "wyzeInternship": "Stage PFE – Wyze Academy (France)",
+    "wyzeDescription": "Développement de l’application mobile Umrah Fly.",
+    "activitiesInternship": "Stagiaire Web – Activités et Loisirs, Djerba",
+    "activitiesDescription": "Développement du site web de l’agence avec la stack MERN : interface moderne et interactive.",
     "organizer": "Membre organisateur (GDSC, ISIMA)",
     "organizerDescription": "Organisation d’événements et d’ateliers autour du développement logiciel et des nouvelles technologies, dans un esprit de partage et d’apprentissage collaboratif.",
     "competitionsTitle": "Compétitions et ateliers",
@@ -150,6 +154,16 @@
         "issuer": "Formation en IA générative avec LangChain et Hugging Face",
         "description": "Mise en pratique de LangChain et Hugging Face pour créer et déployer des modèles d’IA."
       },
+      "rapidLlm": {
+  "title": "Développement rapide d'applications avec les grands modèles de langage (LLM)",
+  "description": "Formation du NVIDIA Deep Learning Institute sur la création rapide d'applications basées sur les grands modèles de langage.",
+  "issuer": "NVIDIA"
+},
+"googleCloudAi": {
+  "title": "Building Data & AI Solutions on Google Cloud",
+  "description": "Cours 365 Data Science sur la création de solutions data et IA avec Google Cloud, avec toutes les leçons et évaluations validées.",
+  "issuer": "365 Data Science"
+},
       "webTrack": {
         "title": "Parcours Web – GDG Tech Days",
         "issuer": "Google Developer Groups Sousse",
